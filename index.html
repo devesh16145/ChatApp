@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoho Zobot Web App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        #salesiq-chat {
+            width: 100vw;
+            height: 100vh;
+            position: absolute; /* Cover the entire viewport */
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="salesiq-chat"></div>
+
+    <script>
+        var $zoho = $zoho || {};
+        $zoho.salesiq = $zoho.salesiq || {
+            widgetcode: "YOUR_ZOBOT_WIDGET_CODE",
+            values: {},
+            ready: function() {}
+        };
+        var d = document;
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.id = "zsiqscript";
+        s.defer = true;
+        s.src = "https://salesiq.zoho.com/widget";
+        t = d.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(s, t);
+        d.write("<div id='zsiqwidget'></div>");
+    </script>
+</body>
+</html>

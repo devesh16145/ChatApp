@@ -1,0 +1,28 @@
+<project>
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://maven.zohodl.com'
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.3.0"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://maven.zohodl.com'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+</project>
